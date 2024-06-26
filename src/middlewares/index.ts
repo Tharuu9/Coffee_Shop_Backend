@@ -23,12 +23,10 @@ export const handleImage = upload.single('file');
 
 export const verifyToken = (req: express.Request, res: any, next: express.NextFunction) => {
 
-    /*const token = req.headers.authorization;
+    const token = req.headers.authorization;
     // verify the token
-
     if (!token) {
-
-        return res.status(401).json("Invalid token");
+        return res.status(401).json("Access token not found !");
     }
     try {
         const data = jwt.verify(token, process.env.SECRET as Secret);
@@ -36,6 +34,5 @@ export const verifyToken = (req: express.Request, res: any, next: express.NextFu
         next();
     } catch (error) {
         return res.status(401).json("Invalid token");
-    }*/
-    next();
+    }
 }
