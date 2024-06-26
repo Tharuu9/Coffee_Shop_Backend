@@ -11,6 +11,7 @@ import CoffeeRouts from "./routes/coffee.routes"
 import DessertRouts from "./routes/dessert.routes"
 import OrderRouts from "./routes/order.routes"
 import DashboardRouts from "./routes/dashboard.routes"
+import UserRoutes from "./routes/user.routes";
 
 
 
@@ -42,9 +43,8 @@ db.on( 'open', () => {
 });
 
 
-
 //routes
-
+app.use('/user', UserRoutes);
 app.use('/employee', EmployeeRouts);
 app.use('/coffee', CoffeeRouts);
 app.use('/dessert', DessertRouts);

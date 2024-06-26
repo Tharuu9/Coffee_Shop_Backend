@@ -44,3 +44,9 @@ export interface IOrderDetail extends mongoose.Document{
     image: string;
 }
 
+export interface IUser extends mongoose.Document{
+    fname: string;
+    lname: string;
+    email: string;
+    password: string;
+}
